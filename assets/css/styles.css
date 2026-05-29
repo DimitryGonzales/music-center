@@ -1,0 +1,34 @@
+:root {
+    --surface: #111111;
+    --surface-container: #222222;
+    --surface-container-high: #333333;
+    --surface-container-highest: #444444;
+    --surface-bright: #555555;
+
+    --on-surface: #eeeeee;
+    --on-surface-variant: #bbbbbb;
+}
+
+* {
+    box-sizing: border-box;
+
+    font-family: "Inter", "Font Awesome 7 Free", sans-serif;
+
+    margin: 0;
+    padding: 0;
+
+    scroll-behavior: smooth;
+    scrollbar-color: var(--primary) transparent;
+}
+
+html {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+}
+
+body {
+    background-color: var(--surface);
+}
