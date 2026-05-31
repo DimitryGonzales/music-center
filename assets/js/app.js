@@ -126,6 +126,7 @@ function renderGlideMusics() {
     });
     new Glide(".glide").mount();
 }
+
 function renderMusics() {
     const musicWrapper = document.getElementById("music-wrapper");
     musicWrapper.innerHTML = "";
