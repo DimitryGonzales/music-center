@@ -82,9 +82,50 @@ const data = [
 ];
 
 function renderMusics() {
+    const glideSlides = document.querySelector(".glide__slides");
+    glideSlides.innerHTML = "";
+    const glideBullets = document.querySelector(".glide__bullets");
+    glideBullets.innerHTML = "";
+    const musics = data.filter((item) => item.id <= 3);
+    musics.forEach((item) => {
+        const glideSlide = document.createElement("li");
+        glideSlide.classList.add("glide__slide");
+
+        const music = document.createElement("article");
+        music.setAttribute("data-id", item.id);
+        music.classList.add("music");
+        music.classList.add("glide-music");
+        music.style.backgroundImage = `url(${item.cover})`;
+        music.addEventListener("click", () => {
+            window.location.href = `detalhes.html?id=${music.getAttribute("data-id")}`;
+        });
+
+        const musicInfo = document.createElement("div");
+        musicInfo.classList.add("music-info");
+        music.appendChild(musicInfo);
+
+        const musicTitle = document.createElement("h3");
+        musicTitle.classList.add("music-title");
+        musicTitle.textContent = item.name;
+        musicInfo.appendChild(musicTitle);
+
+        const musicAuthor = document.createElement("p");
+        musicAuthor.classList.add("music-author");
+        musicAuthor.textContent = item.author;
+        musicTitle.appendChild(musicAuthor);
+
+        glideSlide.appendChild(music);
+        glideSlides.appendChild(glideSlide);
+
+        const glideBullet = document.createElement("button");
+        glideBullet.classList.add("glide__bullet");
+        glideBullet.setAttribute("data-glide-dir", item.id - 1);
+        glideBullets.appendChild(glideBullet);
+    });
+    new Glide(".glide").mount();
+
     const musicWrapper = document.getElementById("music-wrapper");
     musicWrapper.innerHTML = "";
-
     data.forEach((item) => {
         const music = document.createElement("article");
         music.setAttribute("data-id", item.id);
@@ -116,7 +157,7 @@ function filterMusics() {
     const musicSearch = document.getElementById("search-music");
     const musicSearchText = musicSearch.value.toLowerCase();
 
-    const musics = document.querySelectorAll(".music");
+    const musics = document.querySelectorAll(".music:not(.glide-music)");
     musics.forEach((item) => {
         if (item.textContent.toLowerCase().includes(musicSearchText)) {
             item.style.display = "flex";

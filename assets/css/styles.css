@@ -22,6 +22,7 @@
 
     scroll-behavior: smooth;
     scrollbar-color: var(--primary) transparent;
+    scroll-padding-top: calc((8px * 2) + 40px);
 }
 
 html {
@@ -149,7 +150,60 @@ body {
     color: var(--on-surface-variant);
 }
 
+.glide {
+    width: 100%;
+    max-width: 1000px;
+    aspect-ratio: 16/9;
+}
+
+.glide__track,
+.glide__slides,
+.glide__slide{
+    height: 100%;
+    width: 100%;
+}
+
+.glide__slide {
+    display: flex;
+    justify-content: center;
+}
+
+.glide__arrow {
+    background-color: var(--primary) !important;
+    border-radius: 100% !important;
+    border: none !important;
+
+    color: var(--on-primary) !important;
+
+    height: 40px !important;
+    width: auto !important;
+    aspect-ratio: 1/1 !important;
+
+    transition: border-radius 200ms ease !important;
+}
+
+.glide__arrow:hover {
+    border-radius: 8px !important;
+}
+
+.glide__bullet {
+    background-color: var(--on-surface-variant) !important;
+    border: none !important;
+}
+
+.glide__bullet:not(.glide__bullet--active):hover {
+    background-color: var(--on-surface) !important;
+}
+
+.glide__bullet--active {
+    background-color: var(--primary) !important;
+}
+
 main {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
     padding: 32px;
 
     width: 100%;
@@ -226,7 +280,12 @@ main {
         transform 200ms ease;
 }
 
-.music:hover {
+.music.glide-music {
+    height: 100%;
+    width: auto;
+}
+
+.music:not(.glide-music):hover {
     box-shadow: 0 8px 16px 0 #000000;
 
     transform: translateY(-4px);
@@ -249,10 +308,20 @@ main {
         padding 200ms ease;
 }
 
-.music-info:hover {
+.glide-music .music-info {
+    align-items: center;
+    justify-content: center;
+}
+
+.music:hover .music-info {
     backdrop-filter: blur(8px);
 
-    padding-bottom: calc(16px + 40px);
+    padding-bottom: calc(40px + 16px);
+}
+
+.music.glide-music:hover .music-info {
+    padding-top: calc(40px + 16px);
+    padding-bottom: 0;
 }
 
 .music-title {
@@ -260,13 +329,14 @@ main {
     font-weight: bold;
 }
 
-.music-rank {
-    color: var(--primary);
-}
-
 .music-author {
     color: var(--on-surface-variant);
     font-size: 0.9rem;
+}
+
+.glide-music .music-title,
+.glide-music .music-author {
+    text-align: center;
 }
 
 .music-info::before {
@@ -292,6 +362,13 @@ main {
     transform: translateY(100%);
 
     transition: transform 200ms ease;
+}
+
+.glide-music .music-info::before {
+    top: 0;
+    bottom: unset;
+
+    transform: translateY(-100%);
 }
 
 .music:hover .music-info::before {

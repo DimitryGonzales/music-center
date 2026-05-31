@@ -5,6 +5,30 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Music Center</title>
 
+        <!--Glide JS -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/glide.min.js"
+            integrity="sha512-2sI5N95oT62ughlApCe/8zL9bQAXKsPPtZZI2KE3dznuZ8HpE2gTMHYzyVN7OoSPJCM1k9ZkhcCo3FvOirIr2A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+
+        <!--Glide CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.min.css"
+            integrity="sha512-tYKqO78H3mRRCHa75fms1gBvGlANz0JxjN6fVrMBvWL+vOOy200npwJ69OBl9XEsTu3yVUvZNrdWFIIrIf8FLg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.theme.min.css"
+            integrity="sha512-8vDOoSF7kZUYkn7BiQulRCTvpRoenljlkQDZhM6+IqDJi5jHDH9QEYH9NfMBB8LlqiYc7O17YGxbGx7dOxKrpw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+
         <!--Font Inter-->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -55,6 +79,29 @@
         </header>
 
         <main>
+            <div class="glide">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides" id="carrousel"></ul>
+                </div>
+
+                <div class="glide__arrows" data-glide-el="controls">
+                    <button
+                        class="glide__arrow glide__arrow--left"
+                        data-glide-dir="<"
+                    >
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                    <button
+                        class="glide__arrow glide__arrow--right"
+                        data-glide-dir=">"
+                    >
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <div class="glide__bullets" data-glide-el="controls[nav]"></div>
+            </div>
+
             <section id="musics">
                 <header class="section-header">
                     <h2 class="section-title">Músicas</h2>
@@ -87,7 +134,9 @@
                     <p class="profile-info">
                         Aluno:
 
-                        <span class="profile-info-content">Dimitry</span>
+                        <span class="profile-info-content"
+                            >Dimitry Silva Gonzales Alves</span
+                        >
                     </p>
                     <p class="profile-info">
                         Curso:
