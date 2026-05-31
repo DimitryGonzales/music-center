@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" page="main">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Music Center</title>
 
         <!--Font Inter-->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,6 +24,85 @@
 
         <!--CSS-->
         <link rel="stylesheet" href="assets/css/styles.css" />
+
+        <!--JS-->
+        <script src="assets/js/app.js" defer></script>
     </head>
-    <body></body>
+    <body>
+        <header class="header">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-music"></i>
+                </div>
+
+                <h1 class="logo-title">Music Center</h1>
+            </a>
+
+            <nav>
+                <ul>
+                    <li class="header-link-wrapper">
+                        <a
+                            href="#musics"
+                            class="header-link underline-when-hover"
+                            >Músicas</a
+                        >
+                        <a href="#info" class="header-link underline-when-hover"
+                            >Informações</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="musics">
+                <header class="section-header">
+                    <h2 class="section-title">Músicas</h2>
+
+                    <input
+                        type="text"
+                        placeholder="Pesquisar música..."
+                        id="search-music"
+                    />
+                </header>
+
+                <div id="music-wrapper"></div>
+            </section>
+        </main>
+
+        <footer class="footer" id="info">
+            <section class="footer-section">
+                <h2 class="footer-section-title">Sobre</h2>
+
+                <p class="about">
+                    Ferramenta web que extrai e reúne informações gerais sobre
+                    músicas, álbuns e artistas em um só lugar.
+                </p>
+            </section>
+
+            <section class="footer-section">
+                <h2 class="footer-section-title">Autoria</h2>
+
+                <div class="profile">
+                    <p class="profile-info">
+                        Aluno:
+
+                        <span class="profile-info-content">Dimitry</span>
+                    </p>
+                    <p class="profile-info">
+                        Curso:
+
+                        <span class="profile-info-content"
+                            >Engenharia de Software</span
+                        >
+                    </p>
+                    <p class="profile-info">
+                        Turma:
+
+                        <span class="profile-info-content">Manhã</span>
+                    </p>
+                </div>
+            </section>
+        </footer>
+    </body>
 </html>

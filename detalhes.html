@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" page="details">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Detalhes</title>
 
         <!--Font Inter-->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,7 +23,38 @@
         />
 
         <!--CSS-->
-        <link rel="stylesheet" href="assets/css/styles.css" />
+        <link rel="stylesheet" href="assets/css/detalhes.css" />
+
+        <!--JS-->
+        <script src="assets/js/app.js" defer></script>
     </head>
-    <body></body>
+    <body>
+        <header class="header">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-music"></i>
+                </div>
+
+                <h1 class="logo-title">Music Center</h1>
+            </a>
+        </header>
+
+        <main>
+            <section id="detalhes">
+                <a href="index.html" class="go-back">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
+
+                <div id="cover">
+                    <p id="duration"></p>
+                </div>
+
+                <div class="info">
+                    <h2 id="title"></h2>
+                    <p id="album"></p>
+                    <p id="author"></p>
+                </div>
+            </section>
+        </main>
+    </body>
 </html>
