@@ -81,11 +81,13 @@ const data = [
     },
 ];
 
-function renderMusics() {
+function renderGlideMusics() {
     const glideSlides = document.querySelector(".glide__slides");
     glideSlides.innerHTML = "";
+
     const glideBullets = document.querySelector(".glide__bullets");
     glideBullets.innerHTML = "";
+
     const musics = data.filter((item) => item.id <= 3);
     musics.forEach((item) => {
         const glideSlide = document.createElement("li");
@@ -123,9 +125,11 @@ function renderMusics() {
         glideBullets.appendChild(glideBullet);
     });
     new Glide(".glide").mount();
-
+}
+function renderMusics() {
     const musicWrapper = document.getElementById("music-wrapper");
     musicWrapper.innerHTML = "";
+
     data.forEach((item) => {
         const music = document.createElement("article");
         music.setAttribute("data-id", item.id);
@@ -194,6 +198,7 @@ function renderDetails() {
 const html = document.documentElement;
 const htmlPage = html.getAttribute("page");
 if (htmlPage === "main") {
+    renderGlideMusics();
     renderMusics();
 
     const musicSearch = document.getElementById("search-music");
