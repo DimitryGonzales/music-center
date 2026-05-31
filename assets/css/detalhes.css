@@ -1,0 +1,251 @@
+:root {
+    --surface: #111111;
+    --surface-container: #222222;
+    --surface-container-high: #333333;
+    --surface-container-highest: #444444;
+    --surface-bright: #555555;
+
+    --on-surface: #eeeeee;
+    --on-surface-variant: #bbbbbb;
+
+    --primary: #7cc4ff;
+    --on-primary: #00233d;
+}
+
+* {
+    box-sizing: border-box;
+
+    font-family: "Inter", "Font Awesome 7 Free", sans-serif;
+
+    margin: 0;
+    padding: 0;
+
+    scrollbar-color: var(--primary) transparent;
+}
+
+html {
+    font-optical-sizing: auto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-position: center;
+    background-size: cover;
+
+    height: 100dvh;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: color-mix(
+        in srgb,
+        var(--surface-container) 75%,
+        transparent
+    );
+    border-radius: 0 0 calc(8px + 8px) calc(8px + 8px);
+    backdrop-filter: blur(8px);
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+
+    padding: 8px 16px;
+
+    height: calc((8px * 2) + 40px);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    height: 100%;
+}
+
+.logo-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--primary);
+    border-radius: 100%;
+
+    color: var(--on-primary);
+
+    height: 100%;
+    aspect-ratio: 1/1;
+
+    transition: border-radius 200ms ease;
+}
+
+.logo:hover .logo-icon {
+    border-radius: 8px;
+}
+
+.logo-title {
+    color: var(--on-surface);
+    font-size: 1.25rem;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    backdrop-filter: blur(16px);
+
+    padding: 32px;
+    padding-top: calc(((8px * 2) + 40px) + 32px);
+
+    height: 100%;
+    width: 100%;
+}
+
+#detalhes {
+    display: flex;
+    gap: 16px;
+
+    background-color: var(--surface);
+    border-radius: calc(32px + 8px);
+    box-shadow: 0 8px 16px 0 #000000;
+
+    position: relative;
+
+    padding: 32px;
+
+    max-height: 100%;
+    width: 100%;
+    max-width: 600px;
+}
+
+.go-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--primary);
+    border-radius: 100%;
+    box-shadow: 0 4px 16px 0 #000000;
+
+    color: var(--on-primary);
+
+    position: absolute;
+    right: 100%;
+    bottom: 100%;
+
+    height: 40px;
+    aspect-ratio: 1/1;
+}
+
+#cover {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+
+    background: url(https://picsum.photos/100);
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
+
+    padding: 8px;
+
+    width: 30%;
+    aspect-ratio: 1/1;
+    flex: 0 0 auto;
+}
+
+#duration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: color-mix(
+        in srgb,
+        var(--surface-container) 50%,
+        transparent
+    );
+    border-radius: calc(25px / 2);
+    backdrop-filter: blur(8px);
+
+    color: var(--on-surface-variant);
+    font-size: 0.9rem;
+
+    padding: 0 8px;
+
+    height: 25px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+}
+
+#title,
+#album,
+#author {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    overflow: hidden;
+}
+
+#title {
+    color: var(--on-surface);
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+#album {
+    color: var(--on-surface-variant);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#author {
+    color: var(--on-surface-variant);
+    font-size: 1rem;
+}
+
+@media (width <= 800px) {
+    .go-back {
+        right: 100%;
+        bottom: calc(100% + 16px);
+
+        transform: translateX(100%);
+    }
+}
+
+@media (width <= 600px) {
+    #detalhes {
+        border-radius: calc(16px + 8px);
+
+        padding: 16px;
+    }
+}
+
+@media (width <= 400px) {
+    #detalhes {
+        flex-direction: column;
+    }
+
+    #cover {
+        width: 100%;
+    }
+
+    .info {
+        align-items: center;
+    }
+}
