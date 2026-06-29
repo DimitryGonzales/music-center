@@ -1,0 +1,96 @@
+{
+    "usuarios": [
+        {
+            "id": "jJEksucyLcM",
+            "login": "admin",
+            "senha": "admin",
+            "nome": "admin",
+            "email": "admin",
+            "admin": true
+        }
+    ],
+    "musics": [
+        {
+            "id": "1",
+            "cover": "https://picsum.photos/id/11/500/",
+            "duration": "5:55",
+            "title": "Bohemian Rhapsody",
+            "album": "A Night at the Opera",
+            "author": "Queen"
+        },
+        {
+            "id": "2",
+            "cover": "https://picsum.photos/id/12/500/",
+            "duration": "3:03",
+            "title": "Imagine",
+            "album": "Imagine",
+            "author": "John Lennon"
+        },
+        {
+            "id": "3",
+            "cover": "https://picsum.photos/id/13/500/",
+            "duration": "5:01",
+            "title": "Smells Like Teen Spirit",
+            "album": "Nevermind",
+            "author": "Nirvana"
+        },
+        {
+            "id": "4",
+            "cover": "https://picsum.photos/id/14/500/",
+            "duration": "4:54",
+            "title": "Billie Jean",
+            "album": "Thriller",
+            "author": "Michael Jackson"
+        },
+        {
+            "id": "5",
+            "cover": "https://picsum.photos/id/15/500/",
+            "duration": "6:30",
+            "title": "Hotel California",
+            "album": "Hotel California",
+            "author": "Eagles"
+        },
+        {
+            "id": "6",
+            "cover": "https://picsum.photos/id/16/500/",
+            "duration": "3:48",
+            "title": "Rolling in the Deep",
+            "album": "21",
+            "author": "Adele"
+        },
+        {
+            "id": "7",
+            "cover": "https://picsum.photos/id/17/500/",
+            "duration": "3:53",
+            "title": "Shape of You",
+            "album": "Divide",
+            "author": "Ed Sheeran"
+        },
+        {
+            "id": "8",
+            "cover": "https://picsum.photos/id/18/500/",
+            "duration": "3:20",
+            "title": "Blinding Lights",
+            "album": "After Hours",
+            "author": "The Weeknd"
+        },
+        {
+            "id": "9",
+            "cover": "https://picsum.photos/id/19/500/",
+            "duration": "5:26",
+            "title": "Lose Yourself",
+            "album": "Curtain Call",
+            "author": "Eminem"
+        },
+        {
+            "id": "10",
+            "cover": "https://picsum.photos/id/10/500/",
+            "duration": "4:18",
+            "title": "Wonderwall",
+            "album": "(What's the Story) Morning Glory?",
+            "author": "Oasis"
+        }
+    ],
+    "favorites": [],
+    "$schema": "./node_modules/json-server/schema.json"
+}

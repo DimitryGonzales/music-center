@@ -1,11 +1,14 @@
 <!doctype html>
-<html lang="en" page="main">
+<html lang="en" data-page="main">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Music Center</title>
 
-        <!--Glide JS -->
+        <!--Login-->
+        <script src="./assets/js/login.js"></script>
+
+        <!--Glide JS-->
         <script
             src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/glide.min.js"
             integrity="sha512-2sI5N95oT62ughlApCe/8zL9bQAXKsPPtZZI2KE3dznuZ8HpE2gTMHYzyVN7OoSPJCM1k9ZkhcCo3FvOirIr2A=="
@@ -13,7 +16,7 @@
             referrerpolicy="no-referrer"
         ></script>
 
-        <!--Glide CSS -->
+        <!--Glide CSS-->
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.min.css"
@@ -47,14 +50,14 @@
         />
 
         <!--CSS-->
-        <link rel="stylesheet" href="assets/css/styles.css" />
+        <link rel="stylesheet" href="./assets/css/styles.css" />
 
         <!--JS-->
-        <script src="assets/js/app.js" defer></script>
+        <script src="./assets/js/app.js" defer></script>
     </head>
     <body>
         <header class="header">
-            <a href="#" class="logo">
+            <a href="/" class="logo">
                 <div class="logo-icon">
                     <i class="fa-solid fa-music"></i>
                 </div>
@@ -66,12 +69,9 @@
                 <ul>
                     <li class="header-link-wrapper">
                         <a
-                            href="#musics"
+                            href="favoriteMusics.html"
                             class="header-link underline-when-hover"
-                            >Músicas</a
-                        >
-                        <a href="#info" class="header-link underline-when-hover"
-                            >Informações</a
+                            >Favoritos</a
                         >
                     </li>
                 </ul>
@@ -102,7 +102,7 @@
                 <div class="glide__bullets" data-glide-el="controls[nav]"></div>
             </div>
 
-            <section id="musics">
+            <section>
                 <header class="section-header">
                     <h2 class="section-title">Músicas</h2>
 
@@ -117,7 +117,7 @@
             </section>
         </main>
 
-        <footer class="footer" id="info">
+        <footer class="footer">
             <section class="footer-section">
                 <h2 class="footer-section-title">Sobre</h2>
 

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en" data-page="details">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Detalhes</title>
+
+        <!--Login-->
+        <script src="./assets/js/login.js"></script>
+
+        <!--Font Inter-->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+            rel="stylesheet"
+        />
+
+        <!--Font Awesome-->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+            integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+
+        <!--CSS-->
+        <link rel="stylesheet" href="./assets/css/styles.css" />
+
+        <!--JS-->
+        <script src="./assets/js/app.js" defer></script>
+    </head>
+    <body>
+        <header class="header">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-music"></i>
+                </div>
+
+                <h1 class="logo-title">Music Center</h1>
+            </a>
+
+            <nav>
+                <ul>
+                    <li class="header-link-wrapper">
+                        <a
+                            href="favoriteMusics.html"
+                            class="header-link underline-when-hover"
+                            >Favoritos</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="details">
+                <a href="index.html" class="details-go-back">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
+
+                <div id="details-cover">
+                    <p id="details-duration"></p>
+                </div>
+
+                <div class="details-info">
+                    <h2 id="details-title"></h2>
+                    <p id="details-album"></p>
+                    <p id="details-author"></p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <section class="footer-section">
+                <h2 class="footer-section-title">Sobre</h2>
+
+                <p class="about">
+                    Ferramenta web que extrai e reúne informações gerais sobre
+                    músicas, álbuns e artistas em um só lugar.
+                </p>
+            </section>
+
+            <section class="footer-section">
+                <h2 class="footer-section-title">Autoria</h2>
+
+                <div class="profile">
+                    <p class="profile-info">
+                        Aluno:
+
+                        <span class="profile-info-content"
+                            >Dimitry Silva Gonzales Alves</span
+                        >
+                    </p>
+                    <p class="profile-info">
+                        Curso:
+
+                        <span class="profile-info-content"
+                            >Engenharia de Software</span
+                        >
+                    </p>
+                    <p class="profile-info">
+                        Turma:
+
+                        <span class="profile-info-content">Manhã</span>
+                    </p>
+                </div>
+            </section>
+        </footer>
+    </body>
+</html>
